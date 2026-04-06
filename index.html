@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LeafLens — Plant Disease Detector</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar">
+    <div class="nav-logo">🌿 LeafLens</div>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="detector.html">Detector</a></li>
+      <li><a href="diseases.html">Disease Library</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg-shapes">
+      <div class="shape s1"></div>
+      <div class="shape s2"></div>
+      <div class="shape s3"></div>
+    </div>
+    <div class="hero-content">
+      <span class="badge">AI-Powered Detection</span>
+      <h1>Diagnose Your Plant's <em>Health Instantly</em></h1>
+      <p class="hero-sub">Upload a photo of your plant leaf and get an instant AI-powered diagnosis — identify diseases, understand causes, and learn the best treatments.</p>
+      <div class="hero-cta">
+        <a href="detector.html" class="btn btn-primary">Analyze a Leaf →</a>
+        <a href="diseases.html" class="btn btn-outline">Browse Diseases</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="leaf-card">
+        <div class="leaf-icon">🍃</div>
+        <div class="scan-ring"></div>
+        <div class="scan-bar"></div>
+        <div class="leaf-stats">
+          <span class="stat healthy">✓ Healthy</span>
+          <span class="stat warn">⚠ Blight Risk</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features">
+    <h2 class="section-title">How It <em>Works</em></h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feat-icon">📷</div>
+        <h3>Upload a Photo</h3>
+        <p>Take a clear photo of the affected leaf and upload it directly to our detector.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feat-icon">🔬</div>
+        <h3>AI Analysis</h3>
+        <p>Our AI scans for patterns, discolorations, spots, and textures linked to known diseases.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feat-icon">📋</div>
+        <h3>Get a Diagnosis</h3>
+        <p>Receive a detailed report with the disease name, confidence score, and description.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feat-icon">💊</div>
+        <h3>Treatment Plan</h3>
+        <p>Follow actionable, expert-backed steps to treat your plant and prevent spread.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats-banner">
+    <div class="stat-item"><span class="stat-num">50+</span><span class="stat-label">Diseases Detected</span></div>
+    <div class="stat-item"><span class="stat-num">95%</span><span class="stat-label">Accuracy Rate</span></div>
+    <div class="stat-item"><span class="stat-num">200+</span><span class="stat-label">Plant Species</span></div>
+    <div class="stat-item"><span class="stat-num">Free</span><span class="stat-label">No Account Needed</span></div>
+  </section>
+
+  <!-- COMMON DISEASES PREVIEW -->
+  <section class="preview-diseases">
+    <h2 class="section-title">Common <em>Plant Diseases</em></h2>
+    <div class="disease-cards-row">
+      <div class="dcard">
+        <div class="dcard-emoji">🍅</div>
+        <h4>Tomato Blight</h4>
+        <p>Dark lesions on leaves; spreads rapidly in humid conditions.</p>
+        <a href="diseases.html">Learn more →</a>
+      </div>
+      <div class="dcard">
+        <div class="dcard-emoji">🌾</div>
+        <h4>Powdery Mildew</h4>
+        <p>White powder on surfaces; common in dry warm weather.</p>
+        <a href="diseases.html">Learn more →</a>
+      </div>
+      <div class="dcard">
+        <div class="dcard-emoji">🌿</div>
+        <h4>Leaf Rust</h4>
+        <p>Orange-brown pustules on underside of leaves.</p>
+        <a href="diseases.html">Learn more →</a>
+      </div>
+      <div class="dcard">
+        <div class="dcard-emoji">🥦</div>
+        <h4>Bacterial Spot</h4>
+        <p>Water-soaked spots that turn brown and fall out.</p>
+        <a href="diseases.html">Learn more →</a>
+      </div>
+    </div>
+    <div class="center-btn">
+      <a href="diseases.html" class="btn btn-outline">View Full Library →</a>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="cta-banner">
+    <h2>Ready to diagnose your plant?</h2>
+    <p>It takes less than 30 seconds. No sign-up required.</p>
+    <a href="detector.html" class="btn btn-primary">Start Detection →</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-logo">🌿 LeafLens</div>
+    <p>AI-powered plant health diagnostics for everyone.</p>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="detector.html">Detector</a>
+      <a href="diseases.html">Diseases</a>
+      <a href="about.html">About</a>
+    </div>
+    <p class="footer-copy">© 2025 LeafLens. For educational purposes only.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

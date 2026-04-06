@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About — LeafLens</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-logo">🌿 LeafLens</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="detector.html">Detector</a></li>
+      <li><a href="diseases.html">Disease Library</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+    </ul>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+  </nav>
+
+  <section class="page-header">
+    <h1>About <em>LeafLens</em></h1>
+    <p>Our mission, technology, and the people behind the project.</p>
+  </section>
+
+  <!-- MISSION -->
+  <section class="about-section">
+    <div class="about-mission">
+      <div class="about-text">
+        <h2>Our <em>Mission</em></h2>
+        <p>LeafLens was built with a simple goal: make plant health accessible to everyone — from backyard gardeners to professional agronomists. Plant diseases cause up to 40% of global crop losses annually, and early detection is critical.</p>
+        <p>We combine computer vision and a curated disease database to help you act fast, save your plants, and protect your harvest.</p>
+      </div>
+      <div class="about-visual">
+        <div class="about-icon-box">🌱</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECH STACK -->
+  <section class="tech-section">
+    <h2 class="section-title">The <em>Technology</em></h2>
+    <div class="tech-grid">
+      <div class="tech-card">
+        <div class="tech-icon">🧠</div>
+        <h4>AI Image Analysis</h4>
+        <p>Powered by Claude AI, our detector analyses visual patterns in leaf images to identify disease signatures with high accuracy.</p>
+      </div>
+      <div class="tech-card">
+        <div class="tech-icon">📚</div>
+        <h4>Expert Knowledge Base</h4>
+        <p>Our disease library is curated from peer-reviewed agricultural research and plant pathology databases.</p>
+      </div>
+      <div class="tech-card">
+        <div class="tech-icon">🔒</div>
+        <h4>Privacy First</h4>
+        <p>Photos are analyzed in real-time and never stored on our servers. Your data stays yours.</p>
+      </div>
+      <div class="tech-card">
+        <div class="tech-icon">📱</div>
+        <h4>Works Everywhere</h4>
+        <p>Fully responsive design works on desktop, tablet, and mobile — no app install required.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DISCLAIMER -->
+  <section class="disclaimer-section">
+    <div class="disclaimer-box">
+      <h3>⚠️ Important Disclaimer</h3>
+      <p>LeafLens is designed as an educational and assistive tool. Diagnoses are AI-generated estimates based on visual patterns and should not replace professional agronomic advice. For critical crop management decisions, always consult a certified plant pathologist or agricultural extension service.</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section">
+    <h2 class="section-title">Frequently Asked <em>Questions</em></h2>
+    <div class="faq-list" id="faqList">
+      <!-- injected by JS -->
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-banner">
+    <h2>Try it on your plants today</h2>
+    <p>Upload a photo and get results in seconds — completely free.</p>
+    <a href="detector.html" class="btn btn-primary">Go to Detector →</a>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-logo">🌿 LeafLens</div>
+    <p>AI-powered plant health diagnostics for everyone.</p>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="detector.html">Detector</a>
+      <a href="diseases.html">Diseases</a>
+      <a href="about.html">About</a>
+    </div>
+    <p class="footer-copy">© 2025 LeafLens. For educational purposes only.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

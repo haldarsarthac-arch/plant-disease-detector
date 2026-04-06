@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Disease Library — LeafLens</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-logo">🌿 LeafLens</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="detector.html">Detector</a></li>
+      <li><a href="diseases.html" class="active">Disease Library</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+  </nav>
+
+  <section class="page-header">
+    <h1>Disease <em>Library</em></h1>
+    <p>Browse our comprehensive database of plant diseases, symptoms, and treatments.</p>
+  </section>
+
+  <!-- FILTER BAR -->
+  <section class="library-section">
+    <div class="filter-bar">
+      <input type="text" id="searchInput" placeholder="🔍 Search disease or plant..." oninput="filterDiseases()"/>
+      <div class="filter-tags">
+        <button class="tag active" onclick="filterByCategory('all', this)">All</button>
+        <button class="tag" onclick="filterByCategory('fungal', this)">Fungal</button>
+        <button class="tag" onclick="filterByCategory('bacterial', this)">Bacterial</button>
+        <button class="tag" onclick="filterByCategory('viral', this)">Viral</button>
+        <button class="tag" onclick="filterByCategory('pest', this)">Pest</button>
+      </div>
+    </div>
+
+    <div class="disease-grid" id="diseaseGrid">
+      <!-- injected by JS -->
+    </div>
+
+    <div class="no-results hidden" id="noResults">
+      <div class="no-results-icon">🍂</div>
+      <p>No diseases found matching your search.</p>
+    </div>
+  </section>
+
+  <!-- DISEASE MODAL -->
+  <div class="modal-overlay hidden" id="modalOverlay" onclick="closeModal(event)">
+    <div class="modal-box" id="modalBox">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <div class="modal-emoji" id="modalEmoji"></div>
+      <h2 id="modalName"></h2>
+      <div class="modal-meta">
+        <span class="modal-tag" id="modalCategory"></span>
+        <span class="modal-severity" id="modalSeverity"></span>
+      </div>
+      <div class="modal-sections">
+        <div class="modal-sec">
+          <h4>📌 Description</h4>
+          <p id="modalDesc"></p>
+        </div>
+        <div class="modal-sec">
+          <h4>🔎 Symptoms</h4>
+          <ul id="modalSymptoms"></ul>
+        </div>
+        <div class="modal-sec">
+          <h4>💊 Treatment</h4>
+          <ul id="modalTreatment"></ul>
+        </div>
+        <div class="modal-sec">
+          <h4>🌱 Affected Plants</h4>
+          <p id="modalPlants"></p>
+        </div>
+      </div>
+      <a href="detector.html" class="btn btn-primary">Analyze Your Leaf →</a>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-logo">🌿 LeafLens</div>
+    <p>AI-powered plant health diagnostics for everyone.</p>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="detector.html">Detector</a>
+      <a href="diseases.html">Diseases</a>
+      <a href="about.html">About</a>
+    </div>
+    <p class="footer-copy">© 2025 LeafLens. For educational purposes only.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

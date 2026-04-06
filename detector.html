@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Detector — LeafLens</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-logo">🌿 LeafLens</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="detector.html" class="active">Detector</a></li>
+      <li><a href="diseases.html">Disease Library</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+  </nav>
+
+  <section class="page-header">
+    <h1>Plant Disease <em>Detector</em></h1>
+    <p>Upload a clear photo of the affected leaf to receive an instant AI-powered analysis.</p>
+  </section>
+
+  <section class="detector-section">
+    <div class="detector-layout">
+
+      <!-- UPLOAD PANEL -->
+      <div class="upload-panel">
+        <div class="upload-zone" id="uploadZone">
+          <div class="upload-inner" id="uploadInner">
+            <div class="upload-icon">🌿</div>
+            <h3>Drop your leaf photo here</h3>
+            <p>or click to browse</p>
+            <input type="file" id="fileInput" accept="image/*" style="display:none"/>
+            <button class="btn btn-primary" onclick="document.getElementById('fileInput').click()">Choose File</button>
+            <p class="upload-hint">JPG, PNG or WEBP · Max 10MB</p>
+          </div>
+          <img id="previewImage" class="preview-image hidden" src="" alt="Preview"/>
+        </div>
+
+        <div class="tips-box">
+          <h4>📸 Photo Tips</h4>
+          <ul>
+            <li>Use natural daylight</li>
+            <li>Focus on the affected area</li>
+            <li>Include both sides of the leaf</li>
+            <li>Avoid blurry or shadowed shots</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ANALYSIS PANEL -->
+      <div class="analysis-panel">
+        <div class="analysis-idle" id="analysisIdle">
+          <div class="idle-icon">🔬</div>
+          <h3>Awaiting your image</h3>
+          <p>Upload a plant leaf photo and click <strong>Analyze</strong> to get started.</p>
+        </div>
+
+        <!-- LOADING STATE -->
+        <div class="analysis-loading hidden" id="analysisLoading">
+          <div class="spinner-leaf">🌿</div>
+          <h3>Analyzing leaf...</h3>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar" id="progressBar"></div>
+          </div>
+          <p id="loadingMsg">Scanning for visual patterns...</p>
+        </div>
+
+        <!-- RESULT STATE -->
+        <div class="analysis-result hidden" id="analysisResult">
+          <div class="result-header">
+            <div class="result-emoji" id="resultEmoji">⚠️</div>
+            <div>
+              <h3 id="resultName">Disease Name</h3>
+              <span class="result-badge" id="resultBadge">Detected</span>
+            </div>
+          </div>
+
+          <div class="confidence-box">
+            <span>Confidence</span>
+            <div class="conf-bar-wrap">
+              <div class="conf-bar" id="confBar"></div>
+            </div>
+            <span id="confValue">--</span>
+          </div>
+
+          <div class="result-tabs">
+            <button class="tab-btn active" onclick="switchTab('description', this)">Description</button>
+            <button class="tab-btn" onclick="switchTab('symptoms', this)">Symptoms</button>
+            <button class="tab-btn" onclick="switchTab('treatment', this)">Treatment</button>
+          </div>
+
+          <div class="tab-content" id="tab-description"></div>
+          <div class="tab-content hidden" id="tab-symptoms"></div>
+          <div class="tab-content hidden" id="tab-treatment"></div>
+
+          <div class="result-actions">
+            <button class="btn btn-outline" onclick="resetDetector()">↩ Analyze Another</button>
+            <button class="btn btn-primary" onclick="window.location.href='diseases.html'">View Disease Library</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ANALYZE BUTTON -->
+    <div class="center-btn analyze-btn-wrap">
+      <button class="btn btn-primary btn-large hidden" id="analyzeBtn" onclick="analyzeImage()">🔬 Analyze Leaf</button>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-logo">🌿 LeafLens</div>
+    <p>AI-powered plant health diagnostics for everyone.</p>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="detector.html">Detector</a>
+      <a href="diseases.html">Diseases</a>
+      <a href="about.html">About</a>
+    </div>
+    <p class="footer-copy">© 2025 LeafLens. For educational purposes only.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
